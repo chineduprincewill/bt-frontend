@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/9b1c8d52ed.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- <script>
+            (function () {
+                var w = window;
+                var ic = w.Intercom;
+                if (typeof ic === 'function') {
+                    ic('reattach_activator');
+                    ic('update', w.intercomSettings);
+                } else {
+                    var d = document;
+                    var i = function () {
+                        i.c(arguments);
+                    };
+                    i.q = [];
+                    i.c = function (args) {
+                        i.q.push(args);
+                    };
+                    w.Intercom = i;
+                    const appId = import.meta.env.VITE_INTERCOM_APP_ID;
+                    var l = function () {
+                        var s = d.createElement('script');
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = 'https://widget.intercom.io/widget/' + appId;
+                        var x = d.getElementsByTagName('script')[0];
+                        x.parentNode.insertBefore(s, x);
+                    };
+                    if (document.readyState === 'complete') {
+                        l();
+                    } else if (w.attachEvent) {
+                        w.attachEvent('onload', l);
+                    } else {
+                        w.addEventListener('load', l, false);
+                    }
+                }
+            })();
+        </script> -->
+    <script>
+        window.intercomSettings = {
+            app_id: 'arvd5i3i',
+        };
+    </script>
+
+    <script>
+        const global = globalThis;
+    </script>
+
+    <script src="https://widget.intercom.io/widget/arvd5i3i" async></script>
+    <title>BlackAt</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

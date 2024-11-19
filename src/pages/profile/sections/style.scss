@@ -1,0 +1,56 @@
+.profile_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: 2fr 1fr;
+    }
+  
+    & .pane {
+      & .left {
+        grid-column: span 1;
+        
+        @media (min-width: 768px) {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+.__see_all_scroll {
+    max-height: 400px !important;
+    overflow-y: scroll;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+        visibility: hidden;
+        opacity: 0; // Initially set the scrollbar to be invisible
+        transition: opacity 0.3s ease; // Add a smooth transition effect
+    }
+
+
+    &::-webkit-scrollbar-thumb {
+        // visibility: hidden;
+        background-color: #c6c6c6;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        // visibility: hidden;
+        background-color: #e0e0e0;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar {
+            visibility: visible;
+            opacity: 1; // Show the scrollbar on hover
+        }
+
+
+        &::-webkit-scrollbar-thumb {
+            visibility: visible;
+            background-color: #8e8e8ebd;
+        }
+    }
+}

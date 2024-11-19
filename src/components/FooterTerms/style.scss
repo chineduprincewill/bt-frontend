@@ -1,0 +1,32 @@
+.footer-terms {
+    margin: 20px 0;
+    width: 100%;
+    margin-top: auto !important;
+
+    >div {
+        width: 100%;
+    }
+
+    .terms_only {
+        align-items: left;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .terms_with_copyright {
+        justify-content: space-between !important;
+        width: 100%;
+    }
+
+    p {
+        color: #000000;
+        font-family: 3"Plus Jakarta Sans", Helvetica;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: normal;
+        margin: 0;
+        text-decoration: none;
+        align-items: left;
+    }
+}

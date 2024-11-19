@@ -1,0 +1,31 @@
+* {
+    font-family: 'Plus Jakarta Sans', Helvetica !important;
+}
+
+.container2 {
+    background: black;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    // width: auto;
+}
+
+.row {
+    width: 90%;
+}
+
+.title {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #E9E9E9;
+    font-size: 14px;
+}

@@ -1,0 +1,215 @@
+#user-info {
+    background-color: #f3f3f3;
+    height: 100% !important;
+    min-height: 100vh !important;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center;
+    padding: 20px 0;
+
+    @media (max-width: 1024px) {
+        // height: 100% !important
+    }
+
+    * {
+        transition: 0.1s;
+    }
+
+    .timeline {
+        border-radius: 10px;
+        border: 1px solid #2F2F2F;
+        padding: 10px 32px;
+
+        p {
+            display: flex;
+            align-items: center;
+            color: #000;
+            text-align: center;
+            font-family: "Plus Jakarta Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 131.25%;
+
+            span:first-child {
+                color: #373737;
+            }
+
+            svg {
+                display: inline-flex;
+                margin-left: 13px;
+                margin-right: 8px;
+            }
+
+            span:last-child {
+                color: #0075FF;
+            }
+        }
+    }
+
+    .vstack {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hstack {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        max-width: 1200px;
+    }
+
+    @media (max-width: 768px) {
+        .logo-container {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 28px;
+        }
+    }
+
+    .__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start !important;
+        padding: 0px 20px;
+        max-width: 1200px;
+        width: 100%;
+        // overflow-y: scroll;
+    }
+
+    .content,
+    .form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        padding-top: 60px;
+        margin: 10px 0;
+        display: flex;
+        align-items: flex-start;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+
+        h4 {
+            color: #848484;
+            margin-bottom: 13px;
+            font-family: "Plus Jakarta Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .hstack {
+            gap: 9px;
+            margin-bottom: 20px;
+
+            svg {
+                width: 46px;
+                height: 46px;
+                flex-shrink: 0;
+            }
+
+            h1 {
+                color: #000;
+                font-family: "Plus Jakarta Sans";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+
+        p {
+            color: #6E6E6E;
+            font-family: "Plus Jakarta Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 74px;
+        }
+
+        .faqs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-bottom: 100px;
+        }
+
+        ol {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding-left: 18px;
+
+            li {
+                &::marker {
+                    color: #000;
+                }
+
+                b {
+                    color: #000;
+                }
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 34px;
+
+            a {
+                color: #000;
+                font-family: "Plus Jakarta Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-decoration-line: underline;
+            }
+
+            .btn-red {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                width: 202px;
+                background-color: #F04950;
+                color: #FFF;
+                font-family: "Plus Jakarta Sans";
+                font-size: 16px;
+                border-radius: 50px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                padding: 16px 35px;
+
+                img {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+        }
+    }
+}

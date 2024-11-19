@@ -1,0 +1,62 @@
+/* Lower page navigation styles */
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    max-width: 300px;
+    padding: 0 30px;
+
+    .profile-header {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        margin: 10px 0;
+
+        img {
+            margin-right: 10px;
+            border-radius: 50px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+
+            .name {
+                font-style: normal;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .navigation-component {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .lower-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; // Added property
+            margin-top: 20px; // Adjust the margin as needed
+
+            .navigation-rectangle {
+                border-radius: 100px;
+                background: #f00;
+                width: 26px;
+                height: 6px;
+                margin: 0 2px; // Adjust the margin as needed
+            }
+
+            .navigation-ellipse {
+                // fill: #545454;
+                max-width: 6px;
+                max-height: 6px;
+                margin: 0 2px; // Adjust the margin as needed
+            }
+        }
+    }
+}

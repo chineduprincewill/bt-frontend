@@ -1,0 +1,40 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Setting up CloudFront invalidation variables..."
+      - 'DISTRIBUTION_ID=$DISTRIBUTION_ID'
+      - 'PATHS="/*"'
+      - echo "Starting first CloudFront invalidation..."
+
+  build:
+    commands:
+      # First CloudFront distribution cache invalidation
+      - >
+        INVALIDATION_ID=$(aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths $PATHS --query 'Invalidation.Id' --output text);
+        echo "First invalidation submitted, ID: $INVALIDATION_ID. Polling for completion...";
+      
+      # Poll for the status of the invalidation, fixed command formatting
+      - |
+        while STATUS=$(aws cloudfront get-invalidation --distribution-id $DISTRIBUTION_ID --id $INVALIDATION_ID --query 'Invalidation.Status' --output text) && [[ "$STATUS" != "Completed" ]];
+        do
+          echo "Waiting for invalidation to complete. Current status: $STATUS";
+          sleep 30; # Check every 30 seconds
+        done
+
+      - echo "First invalidation completed. Proceeding after a 2-minute delay..."
+      - sleep 120
+      
+      # Second CloudFront distribution cache invalidation
+      - 'aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths $PATHS'
+      - echo "Second invalidation submitted."
+
+  post_build:
+    commands:
+      - echo "CloudFront invalidations completed."
+
+# No artifacts needed for an invalidation-only build spec
+artifacts: 
+  files:
+    - none

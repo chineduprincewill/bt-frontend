@@ -1,0 +1,50 @@
+#faq {
+    width: 100%;
+    padding: 0 24px 25px 20px;
+    border-bottom: 1px solid #9C9C9C;
+
+    summary {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            color: #000;
+            font-family: "Plus Jakarta Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .open {
+            display: block;
+        }
+
+        .close {
+            display: none;
+        }
+    }
+
+    &[open] {
+        .open {
+            display: none;
+        }
+
+        .close {
+            display: block;
+        }
+    }
+
+    div {
+        padding-top: 31px;
+        color: #5D5D5D;
+        font-family: "Plus Jakarta Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+}

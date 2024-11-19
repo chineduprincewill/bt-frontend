@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-dropzone-uploader/dist/Dropzone.tsx b/node_modules/react-dropzone-uploader/dist/Dropzone.tsx
+index da29a80..07e1cc6 100644
+--- a/node_modules/react-dropzone-uploader/dist/Dropzone.tsx
++++ b/node_modules/react-dropzone-uploader/dist/Dropzone.tsx
+@@ -500,7 +500,7 @@ class Dropzone extends React.Component<IDropzoneProps, { active: boolean; dragge
+     let params: IUploadParams | null = null
+     try {
+       params = await getUploadParams(fileWithMeta)
+-    } catch (e) {
++    } catch (e: any) {
+       console.error('Error Upload Params', e.stack)
+     }
+     if (params === null) return

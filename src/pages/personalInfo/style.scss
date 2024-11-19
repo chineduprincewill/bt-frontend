@@ -1,0 +1,294 @@
+.personal-info {
+    background-color: #f3f3f3;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box !important;
+
+    .max-width {
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        margin: auto 0;
+        padding: 20px 20px;
+    }
+
+    .info-section {
+        margin: 20px 0;
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: left !important;
+
+        * {
+            font-size: 12px;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+
+        .stage-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center !important;
+            justify-content: left !important;
+            margin: 5px 20px;
+            width: 300px;
+
+            #title {
+                font-size: 15px;
+                text-align: left;
+                margin-left: 15px;
+                font-weight: 600;
+            }
+
+            .circle {
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+                margin: 6px;
+                padding: 5px;
+                color: white;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .completed {
+                background-color: #F04950;
+
+                p {
+                    color: #094200
+                }
+            }
+
+            .uncompleted {
+                background-color: #000000;
+
+            }
+
+            .status {
+                background-color: #C7FFBC;
+                padding: 7px 15px;
+                border-radius: 50px;
+                font-size: 10px;
+                font-weight: 800;
+                letter-spacing: 2px;
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 368px) {
+            .stage-container {
+                width: 100% !important;
+            }
+
+            #title {
+                font-size: 12px !important;
+                text-align: left !important;
+            }
+
+            .circle {
+                height: 14px !important;
+                width: 14px !important;
+                margin: 4px !important;
+                padding: 3px !important;
+            }
+        }
+    }
+
+    .content,
+    .form {
+        align-items: center !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        height: 100%;
+        min-height: 100%;
+        margin: 50px 0 !important;
+    }
+
+    .form {
+        max-width: 500px;
+
+        .steps {
+            color: #000000;
+            font-family: "Plus Jakarta Sans", Helvetica;
+            font-weight: 500;
+            max-width: 420px;
+        }
+
+        .line {
+            width: 100%;
+            border-bottom: 1px solid #a0a0a0a0;
+            margin: 10px 0;
+            margin-bottom: 40px;
+        }
+
+        .header {
+            ._welcome {
+                color: #000000;
+                font-family: "Plus Jakarta Sans", Helvetica;
+                font-size: 25px;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: normal;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .name {
+                color: #818181;
+                font-family: "Plus Jakarta Sans", Helvetica;
+                font-size: 20px;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: normal;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+        }
+
+
+
+        .overlap {
+            margin: 40px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .overlap-group {
+                background-color: #f7f7f7;
+                border: 1px solid;
+                border-color: #C6C6C6;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px;
+                height: 100px;
+                width: 100px;
+                margin: 0 15px;
+
+                .vuesax-linear-eye {
+                    height: 18px !important;
+                    left: 417px !important;
+                    top: 16px !important;
+                    width: 18px !important;
+                }
+
+                .text-wrapper {
+                    color: #7a7a7a;
+                    font-family: "Red Hat Display-Medium", Helvetica;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin: auto 0;
+                    width: 100%;
+                }
+
+                input {
+                    border: none;
+                    background-color: transparent;
+                    width: 100%;
+                    font-family: "Red Hat Display-Medium", Helvetica;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #7a7a7a;
+                    outline: none;
+                }
+            }
+
+        }
+
+    }
+
+    .text-wrapper-2 {
+        color: #000000;
+        font-family: "Plus Jakarta Sans-Regular", Helvetica;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+        text-decoration: underline;
+    }
+
+    .frame {
+        align-items: center;
+        background-color: #f04950;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        padding: 10px 30px;
+        margin: 30px 0;
+        width: auto;
+
+        .text-wrapper-3 {
+            color: #ffffff;
+            font-family: "Plus Jakarta Sans", Helvetica;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: normal;
+            position: relative;
+            margin-right: 10px;
+        }
+    }
+
+    .group {
+        border-bottom: 1px solid #626262;
+    }
+
+    ._circle {
+        border-radius: 100px;
+        color: white;
+        display: flex;
+        padding: 20px;
+        background-color: #20cb00;
+        border: 15px solid #aeff9f;
+        margin-bottom: 30px;
+
+        .welcome-check {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    @media (max-width: 678px) {
+        .form {
+            max-width: 300px;
+
+            .overlap {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0;
+
+                .overlap-group {
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        .info-section {
+            margin: 20px 0 !important;
+            padding: 0;
+        }
+
+        .form2 {
+            .recommendation {
+                padding: 15px 30px;
+
+                .text {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

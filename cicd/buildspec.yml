@@ -1,0 +1,39 @@
+version: 0.2
+phases:
+  install:
+    nodejs: 16
+    commands:
+      - echo getting started
+     
+  pre_build:
+    commands:
+      - echo upload to s3
+      - aws s3 sync src/assets s3://blkat-uploads/assets/ --delete
+      - echo installing node dependencies
+      - echo adding to file 
+      - echo $VITE_SERVER_URL > .env
+      - echo $VITE_WEBSITE_URL > .env
+      - echo $VITE_INTERCOM_SECRET_KEY > .env
+      - ls -la | grep .env 
+      - echo env file exists
+      - cat .env
+      - npm i
+      - echo installing node dependencies
+
+  build:
+    commands:
+      - npm run build 
+      - echo i am done building
+      
+
+  post_build:
+    commands:
+      - echo let dump artifacts
+
+artifacts:
+  files:
+    - "**/*"  
+  base-directory: dist
+  discard-paths: no
+  name: "s3-front-end-artifact $(date +%Y-%m-%d)"
+  #hello

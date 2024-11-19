@@ -1,0 +1,11 @@
+.__logo-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-self: left;
+
+    .logo {
+        height: 40px;
+    }
+}

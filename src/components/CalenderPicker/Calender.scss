@@ -1,0 +1,128 @@
+/* Calendar.css */
+
+#calendar {
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	// width: max-content;
+	background-color: white;
+    padding: 1rem;
+    height: max-content;
+}
+
+.calendar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.prev-button,
+.next-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+thead {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+table {
+	width: 100%;
+}
+
+th,
+td {
+	cursor: pointer;
+}
+
+tbody,
+thead > tr {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(7, minmax(20px, 1fr));
+	justify-items: center;
+}
+
+th {
+	font-weight: 500;
+	font-size: x-small;
+}
+
+.today {
+	background-color: #eee;
+}
+
+.selected-date {
+	background-color: #F00;
+	color: #fff;
+}
+
+.other-month {
+	color: #ccc;
+}
+
+.day {
+	border-radius: 50%;
+    position: relative;
+}
+
+.day > button {
+	width: 32px;
+	height: 32px;
+	font-size: x-small;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+.date-display {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 14px;
+	margin-bottom: 1rem;
+}
+
+.current-date {
+	border-radius: 8px;
+	display: flex;
+	width: 100%;
+	padding: 0.7rem;
+	width: 100%;
+	border: 1px solid #ccc;
+	font-size: 12px;
+}
+
+.today-button {
+	border: 1px solid #ccc;
+	font-size: 12px;
+	padding: 0.7rem;
+	border-radius: 8px;
+}
+
+// aria disabled
+.pin:disabled {
+	cursor: not-allowed !important;
+}
+
+.pin::after {
+    content: '';
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: #F00;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,112 @@
+.right-hero {
+    .__pane {
+        align-items: left;
+        justify-content: left;
+        padding-bottom: 0px !important;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+
+        @media (max-width: 1143px) {
+            // padding: 20px;
+        }
+
+        @media (max-width: 778px) {
+            // padding: 5px;
+        }
+
+
+        .logo-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-self: left;
+
+            .logo {
+                height: 40px;
+            }
+        }
+
+        .pane-container {
+            margin: 0 auto;
+            // padding: 10px 20px;
+            width: 100%;
+            max-width: 1048px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: 778px) {}
+
+            .pane-body {
+                // padding-left: 40px;
+            }
+        }
+    }
+
+    .right {
+        background-color: #000000;
+
+        @media (max-width: 668px) {
+            display: none;
+        }
+
+        @media (max-width: 1200px) {
+            max-width: 400px;
+        }
+
+        @media (max-width: 900px) {
+            max-width: 300px;
+        }
+    }
+
+    .right-pane {
+        flex: 1 !important;
+        background-color: #000000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .pane-container {
+            * {
+                color: #f7f7f7;
+                font-family: 'Plus Jakarta Sans-Regular', Arial, Helvetica;
+                font-style: italic;
+                font-size: 14px;
+            }
+
+            .illustration {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .illu-img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .dark-gradient {
+                    height: 50%;
+                    width: 100%;
+                    position: absolute;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 94.27%);
+                    bottom: 0;
+                    left: 0;
+                    z-index: 7;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

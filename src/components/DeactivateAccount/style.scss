@@ -1,0 +1,240 @@
+.deactivate_acc {
+    width: 100%;
+    background-color: #00000070;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    min-height: 100vh !important;
+    z-index: 500;
+
+    .deact_modal {
+        background-color: white;
+        border-radius: 10px;
+        max-width: fit-content;
+        max-height: fit-content !important;
+        margin: 2rem 0;
+        padding: 1rem;
+        position: relative;
+        height: 400px;
+        min-width: 350px !important;
+    }
+
+    .deact_sub_modal {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .deact_section {
+            margin: 1.5rem 0;
+            padding: 0 2rem;
+        }
+
+        .bottom {
+            border-top: 1px solid #e3e3e3;
+            margin-top: 0;
+            padding-top: 40px;
+        }
+
+        .top {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+
+            h3 {
+                font-size: 1.0rem;
+                font-weight: 600;
+                color: black;
+                max-width: 180px;
+                text-align: center;
+            }
+
+            .close_dialog {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 1rem;
+                cursor: pointer;
+            }
+        }
+
+        .cancel {
+            margin-top: 3rem;
+            border-radius: 50px;
+            background-color: black !important;
+        }
+    }
+
+    #goodbye-header {
+        margin: 20px 0;
+    }
+
+    .close_dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+        cursor: pointer;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: black;
+    }
+
+    .text {
+        font-size: 0.5rem;
+        font-weight: 400;
+        color: black;
+        margin: 1rem 0;
+        text-align: center;
+        max-width: 250px;
+        line-height: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid #e9e9e9;
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: black;
+        margin-right: 10px;
+        background-color: #e9e9e9;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        background-color: #f04950 !important
+    }
+
+    @media (max-width: 678px) {
+        .deact_modal {
+            min-width: 300px !important;
+        }
+
+        .deact_sub_modal {
+            max-height: fit-content !important;
+            overflow-y: hidden !important;
+
+            .top {
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                    max-width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .deact_section {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .input_sect {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+
+                input {
+                    width: 100% !important;
+                    max-width: 100%;
+                    margin: 0.5rem 0;
+                }
+            }
+
+            .deactivate {
+                margin-left: auto
+            }
+        }
+    }
+
+    @media (max-width: 468px) {
+
+        // Make the modal smaller
+
+
+        .deact_sub_modal {
+
+            .deact_section {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .input_sect {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+
+                input {
+                    width: 100% !important;
+                    max-width: 100%;
+                    margin: 0.5rem 0;
+                }
+            }
+
+            .deactivate {
+                margin-left: auto
+            }
+        }
+
+        .top {
+            p {
+                max-width: 200px !important;
+            }
+        }
+    }
+
+    @media (max-width: 350px) {
+        .deact_modal {
+            min-width: 20px !important;
+            margin: 20px;
+        }
+
+        .deact_section {
+            margin-bottom: 20px !important;
+        }
+
+        .bottom {
+            padding-top: 20px !important;
+        }
+
+        .deact_sub_modal {
+            .deact_section {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .input_sect {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+
+                input {
+                    width: 100% !important;
+                    max-width: 100%;
+                    margin: 0.5rem 0;
+                }
+            }
+
+            .deactivate {
+                margin-left: auto
+            }
+        }
+
+
+
+
+    }
+
+}
