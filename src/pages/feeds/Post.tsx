@@ -930,7 +930,7 @@ export const Post = ({
                                     <Circle width={17} height={17} pd={2} bg="grey" noBorder noMg img={''}>
                                         <SmallIcon src={FeedRepost} size={12} />
                                     </Circle>
-                                    <p className="author_">{post.author.firstName + ' ' + post.author.lastName + ' '} reposted </p>
+                                    <p className="author_ text-gray-700">{post.author.firstName + ' ' + post.author.lastName + ' '} reposted </p>
                                 </div>
                                 {/* <p className="createdAt">{formattedDate}</p> */}
                             </div>

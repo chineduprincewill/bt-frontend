@@ -171,7 +171,7 @@ export default function SideBarMobile() {
                                 </>
                             )}
                             <div
-                                className="bottom-0 absolute"
+                                className="bottom-2 absolute"
                                 onClick={() => {
                                     // dispatch(toggleMobileSidebar());
                                     logout()

@@ -13,7 +13,7 @@ export const AboutMe = ({ about }: { about: string; }) => {
                 <p className="section-header"> About me</p>
 
                 {about?.split(' ').length > 20 ? (
-                    <p className="description leading-5">
+                    <p className="description text-gray-600 !text-[14px] md:!text-[16px] leading-5">
                         {about?.split(' ').slice(0, 20).join(' ')} ...
                         <span
                             className="__see-more"
@@ -26,7 +26,7 @@ export const AboutMe = ({ about }: { about: string; }) => {
                         </span>
                     </p>
                 ) : (
-                    <p className="description leading-6">{about}</p>
+                    <p className="description text-gray-600 !text-[14px] md:!text-[16px] leading-6">{about}</p>
                 )}
 
                 <div className="expertise">
